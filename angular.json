@@ -113,6 +113,36 @@
           }
         }
       }
+    },
+    "logger-lib": {
+      "projectType": "library",
+      "root": "projects/logger-lib",
+      "sourceRoot": "projects/logger-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/logger-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/logger-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/logger-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "coverage": false,
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

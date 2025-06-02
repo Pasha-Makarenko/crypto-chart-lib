@@ -7,6 +7,9 @@
       ],
       "crypto-chart-lib": [
         "./dist/crypto-chart-lib"
+      ],
+      "logger-lib": [
+        "./dist/logger-lib"
       ]
     },
     "outDir": "./dist/out-tsc",
